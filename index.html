@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+</head>
+<style>
+    body {
+        background-color: #a9d1c8;
+
+        /* hide scrollbar but allow scrolling */
+
+        -ms-overflow-style: none;
+        /* for Internet Explorer, Edge */
+        scrollbar-width: none;
+        /* for Firefox */
+        overflow-y: scroll;
+    }
+
+    body::-webkit-scrollbar {
+        display: none;
+        /* for Chrome, Safari, and Opera */
+    }
+
+    .error {
+        height: 30em;
+        width: 30em;
+        margin-left: 56em;
+        margin-top: 5em;
+    }
+
+    .text {
+        margin-left: 10em;
+        margin-top: -10em;
+        font-family: 'Roboto', sans-serif;
+        font-size: xx-large;
+        user-select: none;
+    }
+
+    p {
+        margin-left: 10em;
+        font-family: 'Roboto', sans-serif;
+        font-size: large;
+        user-select: none;
+    }
+
+    .below {
+        margin-left: 19em;
+        font-family: 'Roboto', sans-serif;
+        font-size: large;
+        user-select: none;
+    }
+
+    .button {
+        height: 1.7em;
+        width: 10em;
+        background-color: rgb(131, 175, 166);
+        margin-left: 25em;
+        text-decoration: none;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: x-large;
+        font-family: 'Roboto', sans-serif;
+        text-decoration: none;
+        color: black;
+        user-select: none;
+    }
+
+    .disabled {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+</style>
+
+<body oncontextmenu="return false;">
+
+    <img src="https://www.dstech.net/images/easyblog_shared/November_2018/11-26-18/signs_business_help_400.jpg" class=" error">
+    <h1 class="text">404 Page Not Found!</h1>
+    <p>Oh No This Page Is Missing. This Page Is Either Deleted Or URL Is Wrong.</p>
+    <p class="below"> Click Below To Go Back Home.</p>
+    <a style="text-decoration: none;" href="https://www.neropitech.ml">
+        <div class="button">
+            <h2>Back Home!</h2>
+        </div>
+    </a>
+</body>
+
+<script>
+    document.addEventListener('contextmenu', event => event.preventDefault());
+    var client = {
+        init: function() {
+            var o = this;
+            $("body").on("contextmenu", function(e) {
+                return false;
+            });
+            $("img").mousedown(function(e) {
+                e.preventDefault()
+            });
+            $("#searchresults img").mousedown(function(e) {
+                e.preventDefault()
+            });
+        }
+    };
+</script>
+
+</html>
